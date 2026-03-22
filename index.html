@@ -643,9 +643,9 @@
     }
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
-      max-width: 980px;
+      max-width: 720px;
       margin: 0 auto;
     }
     .price-card {
@@ -1320,7 +1320,7 @@
     <div class="container" style="text-align:center">
       <div class="section-label">Simple pricing</div>
       <h2 class="section-title" style="max-width:100%;margin:0 auto 16px">KES 3,000 per month.<br/><em>Everything included.</em></h2>
-      <p style="font-size:17px;color:var(--ink-soft);margin-bottom:32px">No per-seat fees. No feature gates. No dollar pricing. Just one flat rate for your whole team.</p>
+      <p style="font-size:17px;color:var(--ink-soft);margin-bottom:32px">Free for solo use. KES 3,000/month for your whole team. No per-seat fees. No dollar pricing.</p>
       <a href="#" class="btn btn-primary btn-lg" onclick="showPage('pricing')">See all pricing →</a>
     </div>
   </section>
@@ -1378,7 +1378,7 @@
         </div>
 
         <!-- GROWTH -->
-        <div class="price-card featured">
+        <div class="price-card featured" style="max-width:420px;margin:0 auto">
           <div class="price-badge">Most popular</div>
           <div class="price-name">Growth</div>
           <div class="price-amount" id="growthPrice"><sup>KES</sup>3,000</div>
@@ -1398,29 +1398,10 @@
           </ul>
           <a href="https://app.azayon.com/register" class="btn btn-primary" style="width:100%;justify-content:center">Start free trial →</a>
         </div>
-
-        <!-- FOUNDING MEMBER -->
-        <div class="price-card">
-          <div class="price-badge amber">🏆 Only 20 spots</div>
-          <div class="price-name">Founding Member</div>
-          <div class="price-amount"><sup>KES</sup>1,500</div>
-          <div class="price-period">per month · locked in forever</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="tick">✓</span> Everything in Growth</li>
-            <li><span class="tick">✓</span> <strong>50% off — forever</strong></li>
-            <li><span class="tick">✓</span> Price never increases</li>
-            <li><span class="tick">✓</span> Priority support</li>
-            <li><span class="tick">✓</span> Direct founder access</li>
-            <li><span class="tick">✓</span> Your name in the credits</li>
-          </ul>
-          <a href="https://app.azayon.com/register" class="btn btn-outline" style="width:100%;justify-content:center">Claim your spot →</a>
-          <p style="font-size:12px;color:var(--ink-muted);text-align:center;margin-top:12px">Limited to first 20 customers only</p>
-        </div>
       </div>
 
       <div class="founding-note">
-        <strong>7-day free trial on all paid plans.</strong> No credit card required. Full Growth access from day one. Pay via M-Pesa, card or bank transfer.
+        <strong>7-day free trial on Growth.</strong> No credit card required. Full access from day one. Pay via M-Pesa, card or bank transfer.
       </div>
 
       <!-- FAQ -->
@@ -1438,10 +1419,6 @@
           <div style="padding:24px;border-bottom:1px solid var(--border);background:var(--white)">
             <p style="font-weight:600;margin-bottom:8px">Can I cancel anytime?</p>
             <p style="font-size:14px;color:var(--ink-soft)">Yes. Cancel any time from your settings page. You'll keep access until the end of your billing period. No questions asked.</p>
-          </div>
-          <div style="padding:24px;border-bottom:1px solid var(--border);background:var(--white)">
-            <p style="font-weight:600;margin-bottom:8px">What is the Founding Member offer?</p>
-            <p style="font-size:14px;color:var(--ink-soft)">The first 20 customers get Growth at KES 1,500/month — locked in forever. Even if the price increases in the future, your rate never changes. This is our way of rewarding early believers.</p>
           </div>
           <div style="padding:24px;background:var(--white)">
             <p style="font-weight:600;margin-bottom:8px">I have more than 5 users. Can Azayon still work for me?</p>
@@ -1526,7 +1503,7 @@
       <h2 class="section-title">Small team.<br/><em>Big ambition.</em></h2>
       <p class="section-sub" style="margin-top:16px;margin-bottom:48px">Azayon is built by Peskaya Ltd, a Kenyan technology company. We're a small team obsessed with building tools that actually work for African businesses.</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="mailto:hello@azayon.com" class="btn btn-outline btn-lg">hello@azayon.com</a>
+        <a href="/cdn-cgi/l/email-protection#5e363b3232311e3f243f273130703d3133" class="btn btn-outline btn-lg"><span class="__cf_email__" data-cfemail="8ce4e9e0e0e3ccedf6edf5e3e2a2efe3e1">[email&#160;protected]</span></a>
         <a href="https://app.azayon.com/register" class="btn btn-primary btn-lg">Try Azayon free →</a>
       </div>
     </div>
@@ -1563,7 +1540,7 @@
       <div class="footer-col">
         <h4>Company</h4>
         <a href="#" onclick="showPage('about')">About</a>
-        <a href="mailto:hello@azayon.com">Contact</a>
+        <a href="/cdn-cgi/l/email-protection#48202d24242708293229312726662b2725">Contact</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
@@ -1578,7 +1555,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Page routing
   function showPage(page) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));

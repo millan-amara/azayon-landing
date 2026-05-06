@@ -108,11 +108,11 @@ nav {
   color: var(--ink);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
 }
 .logo::before {
   content: '';
   width: 26px; height: 26px;
+  margin-right: 10px;
   background: url('/icon-mark.svg') center / contain no-repeat;
   flex-shrink: 0;
 }

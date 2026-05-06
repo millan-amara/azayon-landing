@@ -207,84 +207,37 @@
 <!-- ── App preview (CSS-only mock — clearly captioned as such) ── -->
 <section class="preview-section">
   <div class="container">
-    <p class="preview-caption">Pipeline view — drag deals across stages, see value at a glance</p>
-    <!-- The mock is purely decorative; screen readers skip it. -->
-    <div class="preview-wrap anim-fade" aria-hidden="true">
-      <div class="preview-bar">
+    <p class="preview-caption">From dashboard to a closed deal in three drags</p>
+    <!-- Real product GIF, framed in a faux-browser chrome so it reads as a
+         polished demo (Stripe / Linear style). The static dashboard.png is
+         served as the poster: it shows immediately while the GIF loads. -->
+    <div class="preview-wrap anim-fade">
+      <div class="preview-bar" aria-hidden="true">
         <div class="dot dot-r"></div>
         <div class="dot dot-y"></div>
         <div class="dot dot-g"></div>
-        <div class="preview-url">app.azayon.com/pipeline</div>
+        <div class="preview-url">app.azayon.com</div>
       </div>
-      <div class="preview-body">
-        <div class="preview-sidebar">
-          <div class="ps-logo">Aza<span>yon</span></div>
-          <div class="ps-item"><div class="ps-icon"></div> Dashboard</div>
-          <div class="ps-item"><div class="ps-icon"></div> Contacts</div>
-          <div class="ps-item active"><div class="ps-icon purple"></div> Pipeline</div>
-          <div class="ps-item"><div class="ps-icon"></div> Tasks</div>
-          <div class="ps-item"><div class="ps-icon"></div> Automations</div>
-        </div>
-        <div class="preview-main">
-          <div class="pm-header">
-            <div class="pm-title">Sales Pipeline</div>
-            <div class="pm-btn">+ Add deal</div>
-          </div>
-          <div class="pm-stats">
-            <div class="stat-card">
-              <div class="stat-label">Open deals</div>
-              <div class="stat-value">24</div>
-              <div class="stat-sub">↑ 3 this week</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Pipeline value</div>
-              <div class="stat-value">847K</div>
-              <div class="stat-sub">↑ KES 120K</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Win rate</div>
-              <div class="stat-value">68%</div>
-              <div class="stat-sub">↑ 4% this month</div>
-            </div>
-          </div>
-          <div class="pm-pipeline">
-            <div class="pipe-col">
-              <div class="pipe-col-title">New leads</div>
-              <div class="pipe-card">
-                <div class="pipe-card-name">Kamau Builders</div>
-                <div class="pipe-card-val">KES 45,000</div>
-                <span class="pipe-card-tag tag-blue">New</span>
-              </div>
-              <div class="pipe-card">
-                <div class="pipe-card-name">Wangari Retail</div>
-                <div class="pipe-card-val">KES 28,000</div>
-                <span class="pipe-card-tag tag-amber">Follow up</span>
-              </div>
-            </div>
-            <div class="pipe-col">
-              <div class="pipe-col-title">Proposal sent</div>
-              <div class="pipe-card">
-                <div class="pipe-card-name">Lagos Exports</div>
-                <div class="pipe-card-val">KES 120,000</div>
-                <span class="pipe-card-tag tag-amber">Awaiting</span>
-              </div>
-            </div>
-            <div class="pipe-col">
-              <div class="pipe-col-title">Won ✓</div>
-              <div class="pipe-card">
-                <div class="pipe-card-name">Mombasa Fresh</div>
-                <div class="pipe-card-val">KES 75,000</div>
-                <span class="pipe-card-tag tag-green">Closed</span>
-              </div>
-              <div class="pipe-card">
-                <div class="pipe-card-name">Rift Valley Tea</div>
-                <div class="pipe-card-val">KES 90,000</div>
-                <span class="pipe-card-tag tag-green">Closed</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!--
+        autoplay + muted + loop + playsinline is the magic combo:
+          - muted is required by every browser for autoplay to work
+          - playsinline stops iOS Safari from forcing fullscreen
+          - poster is the still image shown until the video has buffered,
+            so the area never looks blank or broken
+          - aria-label describes the animation for screen readers; the
+            <video> element doesn't accept alt the way <img> does
+      -->
+      <video
+        class="preview-media"
+        autoplay muted loop playsinline
+        preload="metadata"
+        poster="/screenshots/dashboard.png"
+        aria-label="Azayon walkthrough: opening the dashboard, switching to the pipeline view, and dragging a deal into the Won column"
+      >
+        <source src="/screenshots/dashboard.mp4" type="video/mp4" />
+        <!-- Fallback for any client that can't play MP4: show the static poster. -->
+        <img src="/screenshots/dashboard.png" alt="Azayon dashboard and pipeline view" />
+      </video>
     </div>
   </div>
 </section>

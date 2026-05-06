@@ -346,6 +346,16 @@ nav {
   grid-template-columns: 200px 1fr;
   min-height: 380px;
 }
+
+/* Real product GIF / image inside the faux-browser frame. block + width:100%
+   makes it fill the chrome cleanly; the wrap's overflow:hidden keeps the
+   bottom corners rounded. */
+.preview-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #f5f5f8;
+}
 .preview-sidebar { background: #1e2336; padding: 20px 0; }
 .ps-logo {
   padding: 0 20px 20px;

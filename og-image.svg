@@ -19,49 +19,69 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5046e4"/>
-      <stop offset="100%" stop-color="#7c6fee"/>
-    </linearGradient>
     <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
     </linearGradient>
+    <radialGradient id="glowA" cx="85%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#16A34A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0E1410" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0%" cy="100%" r="55%">
+      <stop offset="0%" stop-color="#B5462A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0E1410" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Background: deep ink with emerald + clay glows -->
+  <rect width="1200" height="630" fill="#0E1410"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
 
-  <!-- Soft circles for texture -->
-  <circle cx="1080" cy="120" r="220" fill="#ffffff" opacity="0.05"/>
-  <circle cx="120"  cy="540" r="180" fill="#ffffff" opacity="0.04"/>
-
-  <!-- Logo wordmark -->
-  <text x="80" y="120" font-family="Georgia, 'DM Serif Display', serif" font-size="44" font-weight="400" fill="#ffffff" letter-spacing="-1">
-    Aza<tspan fill="#ffd6ff" font-style="italic">yon</tspan>
+  <!-- Brand mark (emerald square + glyph), top-left -->
+  <rect x="80" y="80" width="56" height="56" rx="13" fill="#0F5132"/>
+  <g transform="translate(91.5 92.5) scale(0.128)">
+    <path
+      fill="#ffffff"
+      d="M138.4,239.7c-3.5,4.5,-10.8,2,-10.8,-3.7v-54.6c0,-6.6,-5.4,-12,-12,-12H53.4c-4.9,0,-7.7,-5.5,-4.9,-9.5l39.9,-55.8c5.7,-8,0,-19,-9.8,-19H6.6c-4.9,0,-7.7,-5.5,-4.9,-9.5L53.4,2.5C54.5,1,56.4,0,58.3,0H212.4c4.9,0,7.7,5.5,4.9,9.5l-39.9,55.8c-5.7,8,0,19,9.8,19h60.7c5,0,7.9,5.8,4.7,9.8z"
+    />
+  </g>
+  <text x="155" y="121" font-family="'Bricolage Grotesque', 'Inter Tight', system-ui, sans-serif" font-size="32" font-weight="600" fill="#ffffff" letter-spacing="-0.5">
+    Azayon
   </text>
 
-  <!-- Headline -->
-  <text x="80" y="280" font-family="Georgia, 'DM Serif Display', serif" font-size="76" font-weight="400" fill="#ffffff" letter-spacing="-2">
-    The CRM built for
+  <!-- "v1.0 — Live in Nairobi" mono label, top-right -->
+  <text x="1120" y="115" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="16" fill="#ffffff" opacity="0.55" letter-spacing="0.5">
+    V1.0 · LIVE IN NAIROBI
   </text>
-  <text x="80" y="370" font-family="Georgia, 'DM Serif Display', serif" font-size="76" font-style="italic" fill="#ffd6ff" letter-spacing="-2">
-    African businesses.
+
+  <!-- Headline: tight grotesque, no italic -->
+  <text x="80" y="290" font-family="'Bricolage Grotesque', 'Inter Tight', system-ui, sans-serif" font-size="78" font-weight="600" fill="#ffffff" letter-spacing="-2.5">
+    The CRM that doesn't
+  </text>
+  <text x="80" y="378" font-family="'Bricolage Grotesque', 'Inter Tight', system-ui, sans-serif" font-size="78" font-weight="600" fill="#ffffff" letter-spacing="-2.5">
+    charge you in dollars.
+  </text>
+  <!-- Strikethrough on "dollars" -->
+  <rect x="450" y="358" width="335" height="9" rx="2" fill="#B5462A" opacity="0.8" transform="rotate(-1.5 617 362)"/>
+
+  <text x="80" y="466" font-family="'Bricolage Grotesque', 'Inter Tight', system-ui, sans-serif" font-size="78" font-weight="600" fill="#16A34A" letter-spacing="-2.5">
+    Or per seat.
   </text>
 
   <!-- Subhead -->
-  <text x="80" y="445" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif" font-size="28" fill="#ffffff" opacity="0.9">
-    Pipeline · Invoices · Automations
+  <text x="80" y="528" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="22" fill="#ffffff" opacity="0.65" letter-spacing="-0.2">
+    Pipeline · Contacts · Invoices · Automations · M-Pesa native
   </text>
 
-  <!-- Pricing pill -->
-  <rect x="80" y="490" width="320" height="60" rx="30" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.3"/>
-  <text x="240" y="528" text-anchor="middle" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="600" fill="#ffffff">
-    KES 3,000 / month
+  <!-- Pricing pill, bottom-left -->
+  <rect x="80" y="555" width="280" height="46" rx="23" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="220" y="586" text-anchor="middle" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="#ffffff">
+    KES 3,000 / month — whole team
   </text>
 
-  <!-- Domain -->
-  <text x="1120" y="570" text-anchor="end" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="20" fill="#ffffff" opacity="0.7">
-    azayon.com
+  <!-- Domain, bottom-right (mono, more on-brand) -->
+  <text x="1120" y="586" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="16" fill="#ffffff" opacity="0.55" letter-spacing="0.5">
+    AZAYON.COM
   </text>
 </svg>

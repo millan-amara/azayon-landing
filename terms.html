@@ -12,23 +12,27 @@
   <meta name="description" content="The legal terms that apply when you use Azayon, the CRM for African businesses. Operated by Peskaya Limited under the laws of Kenya." />
   <link rel="canonical" href="https://azayon.com/terms" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#5046e4" />
+  <meta name="theme-color" content="#0F5132" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --purple: #5046e4;
-      --ink: #0f0e17;
-      --ink-soft: #3d3c47;
-      --ink-muted: #8b8a96;
-      --border: #e8e7ef;
-      --bg: #fafafa;
-      --white: #ffffff;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg:        #FAF7F1;
+      --surface:   #FFFFFF;
+      --ink:       #0E1410;
+      --ink-2:     #262B27;
+      --ink-soft:  #3A3F3B;
+      --ink-muted: #8E928D;
+      --border:    #E5DECD;
+      --border-2:  #EFE9DA;
+      --accent:    #0F5132;
+      --clay:      #B5462A;
+      --sans:    'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+      --display: 'Bricolage Grotesque', 'Inter Tight', var(--sans);
+      --mono:    'IBM Plex Mono', ui-monospace, Menlo, monospace;
     }
     body {
       font-family: var(--sans);
@@ -36,111 +40,150 @@
       color: var(--ink);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
     .topbar {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-2);
+      background: rgba(250,247,241,0.78);
+      backdrop-filter: saturate(140%) blur(14px);
+      -webkit-backdrop-filter: saturate(140%) blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     .topbar .container { display: flex; align-items: center; justify-content: space-between; }
+
     .logo {
-      font-family: var(--serif);
-      font-size: 24px;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: -0.02em;
       color: var(--ink);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
-    .logo span { color: var(--purple); font-style: italic; }
+    .logo::before {
+      content: '';
+      width: 26px; height: 26px;
+      background: url('/icon-mark.svg') center / contain no-repeat;
+      flex-shrink: 0;
+    }
+    .logo span { color: inherit; font-style: normal; }
     .topbar a:not(.logo) {
       font-size: 14px;
       color: var(--ink-soft);
       text-decoration: none;
+      transition: color .15s;
     }
-    .topbar a:not(.logo):hover { color: var(--purple); }
+    .topbar a:not(.logo):hover { color: var(--ink); }
 
     main { padding: 64px 0 96px; }
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 56px);
-      letter-spacing: -1px;
-      margin-bottom: 8px;
+    main .container > h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(40px, 5.4vw, 64px);
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+      margin-bottom: 12px;
+      color: var(--ink);
     }
     .last-updated {
-      color: var(--ink-muted);
-      font-size: 14px;
-      margin-bottom: 48px;
-    }
-    .toc {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-    }
-    .toc h2 {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
+      font-family: var(--mono);
+      font-size: 12px;
       letter-spacing: 0.04em;
       color: var(--ink-muted);
-      margin-bottom: 12px;
-    }
-    .toc ol {
-      list-style: none;
-      column-count: 2;
-      column-gap: 24px;
-    }
-    @media (max-width: 600px) { .toc ol { column-count: 1; } }
-    .toc li {
-      font-size: 14px;
-      padding: 4px 0;
-      break-inside: avoid;
-    }
-    .toc a { color: var(--ink-soft); text-decoration: none; }
-    .toc a:hover { color: var(--purple); text-decoration: underline; }
-
-    h2 {
-      font-family: var(--serif);
-      font-size: 26px;
-      letter-spacing: -0.5px;
-      margin-top: 48px;
-      margin-bottom: 16px;
-      scroll-margin-top: 24px;
-    }
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 24px;
-      margin-bottom: 8px;
-    }
-    p, ul, ol {
-      color: var(--ink-soft);
-      margin-bottom: 16px;
-    }
-    ul, ol { padding-left: 24px; }
-    li { margin-bottom: 6px; }
-    a { color: var(--purple); }
-    strong { color: var(--ink); }
-
-    /* The "uppercase liability" block — common convention in SaaS Terms;
-       legal teams often want it visually distinguished. */
-    .legal-emphasis {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px 20px;
-      font-size: 13px;
+      margin-bottom: 48px;
       text-transform: uppercase;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin-bottom: 56px;
+    }
+    .toc h2 {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc h2::before {
+      content: '✱';
+      color: var(--clay);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 0;
+      transform: translateY(2px);
+    }
+    .toc ol { list-style: none; column-count: 2; column-gap: 32px; }
+    @media (max-width: 600px) { .toc ol { column-count: 1; } }
+    .toc li { font-size: 14px; padding: 5px 0; break-inside: avoid; }
+    .toc a { color: var(--ink-2); text-decoration: none; transition: color .15s; }
+    .toc a:hover { color: var(--accent); }
+
+    main h2 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-top: 56px;
+      margin-bottom: 16px;
+      scroll-margin-top: 80px;
+      color: var(--ink);
+    }
+    main h3 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: -0.015em;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+    main p, main ul, main ol { color: var(--ink-2); margin-bottom: 16px; }
+    main ul, main ol { padding-left: 24px; }
+    main li { margin-bottom: 6px; }
+    main a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    main strong { color: var(--ink); font-weight: 600; }
+
+    /* Uppercase liability block — common SaaS Terms convention. */
+    .legal-emphasis {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--clay);
+      border-radius: 10px;
+      padding: 18px 22px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.7;
       letter-spacing: 0.02em;
       color: var(--ink);
+      text-transform: uppercase;
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-      background: var(--white);
-      font-size: 13px;
+      border-top: 1px solid var(--border-2);
+      padding: 28px 0;
+      background: var(--bg);
+      font-family: var(--mono);
+      font-size: 11.5px;
       color: var(--ink-muted);
+      letter-spacing: 0.02em;
     }
     footer .container {
       display: flex;
@@ -149,8 +192,8 @@
       flex-wrap: wrap;
       gap: 16px;
     }
-    footer a { color: var(--ink-muted); text-decoration: none; margin-right: 16px; }
-    footer a:hover { color: var(--purple); }
+    footer a { color: var(--ink-muted); text-decoration: none; margin-right: 16px; transition: color .15s; }
+    footer a:hover { color: var(--ink); }
   </style>
 </head>
 <body>

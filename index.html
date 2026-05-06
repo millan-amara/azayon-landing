@@ -11,7 +11,7 @@
   <meta name="author" content="Peskaya Limited" />
   <link rel="canonical" href="https://azayon.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#5046e4" />
+  <meta name="theme-color" content="#0F5132" />
 
   <!-- ─── Open Graph ─────────────────────────────────────────────────────── -->
   <meta property="og:type" content="website" />
@@ -37,7 +37,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- ─── Structured data — Organization, WebSite, SoftwareApplication ──── -->
-  <!-- The FAQPage schema lives on /pricing where the FAQ content is. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,11 +49,7 @@
     "foundingDate": "2025",
     "foundingLocation": {
       "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      }
+      "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" }
     },
     "contactPoint": [{
       "@type": "ContactPoint",
@@ -66,7 +61,6 @@
     "sameAs": []
   }
   </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,7 +71,6 @@
     "publisher": { "@type": "Organization", "name": "Azayon", "url": "https://azayon.com/" }
   }
   </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -101,51 +94,44 @@
       "M-Pesa, card and bank-transfer payments via Paystack"
     ],
     "offers": [
-      {
-        "@type": "Offer",
-        "name": "Growth (monthly)",
-        "price": "3000",
-        "priceCurrency": "KES",
-        "availability": "https://schema.org/InStock",
-        "url": "https://app.azayon.com/register"
-      },
-      {
-        "@type": "Offer",
-        "name": "Growth (annual)",
-        "price": "25000",
-        "priceCurrency": "KES",
-        "availability": "https://schema.org/InStock",
-        "url": "https://app.azayon.com/register"
-      }
+      { "@type": "Offer", "name": "Growth (monthly)", "price": "3000", "priceCurrency": "KES", "availability": "https://schema.org/InStock", "url": "https://app.azayon.com/register" },
+      { "@type": "Offer", "name": "Growth (annual)",  "price": "25000","priceCurrency": "KES", "availability": "https://schema.org/InStock", "url": "https://app.azayon.com/register" }
     ]
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/landing.css" />
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav>
-  <div class="container">
-    <div class="nav-inner">
-      <a href="/" class="logo">Aza<span>yon</span></a>
+<!-- ── Nav ───────────────────────────────────────────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav-row">
+    <a href="/" class="brand" aria-label="Azayon home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Azayon
+    </a>
+    <nav>
       <ul class="nav-links">
         <li><a href="/#features">Features</a></li>
         <li><a href="/pricing">Pricing</a></li>
         <li><a href="/about">About</a></li>
+        <li><span class="live">v1.0 — Live in Nairobi</span></li>
       </ul>
-      <div class="nav-cta">
-        <a href="https://app.azayon.com/login" class="nav-login">Sign in</a>
-        <a href="https://app.azayon.com/register" class="btn btn-primary">Start free trial</a>
-      </div>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://app.azayon.com/login" class="nav-login">Sign in</a>
+      <a href="https://app.azayon.com/register" class="btn btn-primary btn-sm">
+        Start free trial
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+      </a>
     </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="mobile-nav" id="mobileNav">
     <a href="/#features">Features</a>
@@ -154,202 +140,248 @@
     <a href="https://app.azayon.com/login">Sign in</a>
     <a href="https://app.azayon.com/register" class="btn btn-primary">Start free trial</a>
   </div>
-</nav>
+</header>
 
-<!-- ── Hero ── -->
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-eyebrow anim-1">Built for African businesses</div>
-    <h1 class="anim-2">5-minute setup. <em>KES 3,000/month.</em><br/>Whole team.</h1>
-    <p class="hero-sub anim-3">A CRM built around how African SMBs actually sell — pipeline, contacts, automations and invoices in one tool. No per-seat tax. No dollar conversion.</p>
-    <div class="hero-actions anim-4">
-      <a href="https://app.azayon.com/register" class="btn btn-primary btn-lg">Start your 7-day trial — no card</a>
-      <a href="/pricing" class="btn btn-ghost btn-lg">See pricing</a>
-    </div>
-    <div class="anim-4" style="display:flex;justify-content:center">
-      <div class="risk-pills" role="list" aria-label="Trial guarantees">
-        <span class="risk-pill" role="listitem">No credit card</span>
-        <span class="risk-pill" role="listitem">Full access for 7 days</span>
-        <span class="risk-pill" role="listitem">Cancel anytime</span>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-eyebrow">
+        <span class="tag">New · 2026</span>
+        Built in Nairobi for African SMBs
+      </span>
+      <h1>
+        The CRM that doesn't<br/>
+        charge you in <span class="strike">dollars</span>.<br/>
+        <span class="accent">Or per seat.</span>
+      </h1>
+      <p class="hero-lede">
+        Pipeline, contacts, invoices and automations in one tool — priced
+        for the way African businesses actually work. M-Pesa supported.
+        Whole team included.
+      </p>
+      <div class="hero-actions">
+        <a href="https://app.azayon.com/register" class="btn btn-primary btn-lg">
+          Start your 7-day trial
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+        <a href="/pricing" class="btn btn-ghost btn-lg">See pricing</a>
+      </div>
+      <div class="hero-meta">
+        <span>No credit card</span>
+        <span class="dot"></span>
+        <span>Setup in minutes</span>
+        <span class="dot"></span>
+        <span>Cancel anytime</span>
       </div>
     </div>
+
+    <!-- A "receipt" card — makes the price tangible -->
+    <aside class="hero-receipt" aria-label="Pricing summary">
+      <div class="receipt-row">
+        <span class="receipt-label">Plan</span>
+        <span class="receipt-value">Growth</span>
+      </div>
+      <div class="receipt-row">
+        <span class="receipt-label">Team seats</span>
+        <span class="receipt-value">Unlimited</span>
+      </div>
+      <div class="receipt-row">
+        <span class="receipt-label">Per-seat fee</span>
+        <span class="receipt-value strike-old">KES 1,200 × n</span>
+      </div>
+      <div class="receipt-row">
+        <span class="receipt-label">Currency</span>
+        <span class="receipt-value">KES &nbsp;<span style="color:var(--ink-4);font-weight:500;">(NGN, GHS soon)</span></span>
+      </div>
+      <div class="receipt-row">
+        <span class="receipt-label">Payment</span>
+        <span class="receipt-value">M-Pesa · Card · Bank</span>
+      </div>
+      <div class="receipt-total">
+        <span class="lbl">You pay</span>
+        <span class="val"><span class="ccy">KES</span>3,000<span class="per">/ month</span></span>
+      </div>
+      <div class="receipt-foot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        First 7 days free — no card needed
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- ── Proof strip ── -->
-<div class="proof-strip">
-  <div class="container">
-    <div class="proof-inner">
-      <div class="proof-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        Priced in KES
-      </div>
-      <div class="proof-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        M-Pesa payments
-      </div>
-      <div class="proof-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        AI-powered tools
-      </div>
-      <div class="proof-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        n8n / automation ready
-      </div>
-      <div class="proof-item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        Setup in minutes
-      </div>
-    </div>
+<!-- ── Trust strip / quick proof ─────────────────────────────────────────── -->
+<div class="marquee" aria-label="Why Azayon at a glance">
+  <div class="wrap marquee-row">
+    <span class="item"><span class="num">5min</span>setup</span>
+    <span class="item"><span class="num">∞</span>team seats</span>
+    <span class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      M-Pesa native
+    </span>
+    <span class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      n8n &amp; webhooks
+    </span>
+    <span class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      Built-in AI tools
+    </span>
+    <span class="item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      KE Data Protection Act
+    </span>
   </div>
 </div>
 
-<!-- ── App preview (CSS-only mock — clearly captioned as such) ── -->
-<section class="preview-section">
-  <div class="container">
-    <p class="preview-caption">From dashboard to a closed deal in three drags</p>
-    <!-- Real product GIF, framed in a faux-browser chrome so it reads as a
-         polished demo (Stripe / Linear style). The static dashboard.png is
-         served as the poster: it shows immediately while the GIF loads. -->
-    <div class="preview-wrap anim-fade">
-      <div class="preview-bar" aria-hidden="true">
-        <div class="dot dot-r"></div>
-        <div class="dot dot-y"></div>
-        <div class="dot dot-g"></div>
-        <div class="preview-url">app.azayon.com</div>
+<!-- ── Product showcase ─────────────────────────────────────────────────── -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="showcase-head">
+      <h2>From dashboard<br/>to a closed deal —<br/>in three drags.</h2>
+      <p>What a working day looks like inside Azayon. Real product, no marketing mockup.</p>
+    </div>
+    <div class="showcase-frame reveal">
+      <div class="frame-bar" aria-hidden="true">
+        <div class="frame-dots"><span></span><span></span><span></span></div>
+        <div class="frame-url">app.azayon.com/dashboard</div>
+        <div class="frame-tags"><span>↑ live</span><span>1080p</span></div>
       </div>
-      <!--
-        autoplay + muted + loop + playsinline is the magic combo:
-          - muted is required by every browser for autoplay to work
-          - playsinline stops iOS Safari from forcing fullscreen
-          - poster is the still image shown until the video has buffered,
-            so the area never looks blank or broken
-          - aria-label describes the animation for screen readers; the
-            <video> element doesn't accept alt the way <img> does
-      -->
       <video
-        class="preview-media"
+        class="showcase-media"
         autoplay muted loop playsinline
         preload="metadata"
         poster="/screenshots/dashboard.png"
         aria-label="Azayon walkthrough: opening the dashboard, switching to the pipeline view, and dragging a deal into the Won column"
       >
         <source src="/screenshots/dashboard.mp4" type="video/mp4" />
-        <!-- Fallback for any client that can't play MP4: show the static poster. -->
         <img src="/screenshots/dashboard.png" alt="Azayon dashboard and pipeline view" />
       </video>
+
+      <span class="annot left"  aria-hidden="true"><span class="pip"></span> Live pipeline</span>
+      <span class="annot right" aria-hidden="true"><span class="pip"></span> Auto-created task</span>
     </div>
   </div>
 </section>
 
-<!-- ── Features ── -->
-<section class="section" id="features">
-  <div class="container">
-    <div class="section-label">Everything you need</div>
-    <h2 class="section-title">Built around how African<br/><em>SMBs actually sell</em></h2>
-    <p class="section-sub">Every feature was designed with small teams in Nairobi, Lagos, Accra and Kampala in mind — not Fortune 500 corp.</p>
-    <div class="features-grid">
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">📋</span></div>
-        <h3>Visual pipeline</h3>
-        <p>Drag and drop deals across stages. See exactly where every opportunity stands at a glance. Mark won, mark lost, track everything.</p>
+<!-- ── Features ──────────────────────────────────────────────────────────── -->
+<section class="section" id="features" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="star">✱</span> Everything you need</span>
+        <h2>Built around how African<br/><span class="accent">SMBs actually sell.</span></h2>
       </div>
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">👥</span></div>
+      <p>Every feature was designed with small teams in Nairobi, Lagos, Accra and Kampala in mind — not Fortune 500. The result is a tool that's faster to set up, simpler to use, and priced like it respects your budget.</p>
+    </div>
+
+    <div class="features">
+      <div class="feat feat-1 reveal">
+        <span class="feat-tag">01</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="18" rx="1.5"/><rect x="14" y="3" width="7" height="11" rx="1.5"/></svg>
+        </span>
+        <h3>Visual pipeline</h3>
+        <p>Drag and drop deals across stages. See exactly where every opportunity stands at a glance — won, lost, or stuck.</p>
+      </div>
+
+      <div class="feat feat-2 reveal">
+        <span class="feat-tag">02</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M22 11h-6"/><path d="M19 8v6"/></svg>
+        </span>
         <h3>Contact management</h3>
         <p>Every contact has a full timeline of interactions — calls, emails, notes, deals. Know your customer before every conversation.</p>
       </div>
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">⚡</span></div>
+
+      <div class="feat feat-3 reveal">
+        <span class="feat-tag">03</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
         <h3>Smart automations</h3>
         <p>Set it and forget it. Follow up on cold deals, assign new leads, create tasks automatically — without lifting a finger.</p>
       </div>
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">✨</span></div>
-        <h3>AI tools built in</h3>
-        <p>Draft follow-up emails in seconds, get instant summaries of any contact or deal, and import any spreadsheet with smart column mapping.</p>
+
+      <div class="feat feat-4 reveal">
+        <span class="feat-tag">04 · Featured</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 14.4 9.6 22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></svg>
+        </span>
+        <h3>AI tools, built in</h3>
+        <p>Draft follow-up emails in seconds, get instant summaries of any contact or deal, and import any spreadsheet with smart column mapping. The boring parts of CRM, gone.</p>
       </div>
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">✅</span></div>
+
+      <div class="feat feat-5 reveal">
+        <span class="feat-tag">05</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
         <h3>Task management</h3>
-        <p>Never miss a follow-up. Create tasks linked to contacts and deals, set due dates with reminders, and track your team's workload.</p>
+        <p>Tasks linked to contacts and deals, due dates with reminders, your team's workload at a glance. Nothing slips.</p>
       </div>
-      <div class="feat">
-        <div class="feat-icon"><span aria-hidden="true">🔗</span></div>
-        <h3>n8n integration</h3>
-        <p>Connect Azayon to any other tool via webhooks and n8n. Post to Slack, update Google Sheets, send WhatsApp — automatically.</p>
+
+      <div class="feat feat-6 reveal">
+        <span class="feat-tag">06</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"/></svg>
+        </span>
+        <h3>n8n &amp; webhooks</h3>
+        <p>Connect Azayon to anything. Slack, Sheets, WhatsApp, your accounting tool.</p>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:48px">
-      <a href="https://app.azayon.com/register" class="btn btn-outline btn-lg">See it in action — free for 7 days</a>
     </div>
   </div>
 </section>
 
-<!-- ── How it works ── -->
-<section class="how-section">
-  <div class="container">
-    <div class="section-label" style="text-align:center">How it works</div>
-    <h2 class="section-title" style="text-align:center;max-width:100%;margin:0 auto 0">Up and running<br/><em>in minutes</em></h2>
-    <p class="section-sub" style="text-align:center;margin:16px auto 0">Three steps from sign-up to "this is working."</p>
+<!-- ── How it works ─────────────────────────────────────────────────────── -->
+<section class="section tight" style="background: var(--bg-2); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+  <div class="wrap">
+    <div class="section-head" style="grid-template-columns: 1fr 1fr;">
+      <div>
+        <span class="eyebrow"><span class="star">✱</span> How it works</span>
+        <h2>Up and running<br/>in <span class="accent">three steps.</span></h2>
+      </div>
+      <p>Sign up, drag in your contacts, build your pipeline, watch the automations work. No consultants, no two-week onboarding.</p>
+    </div>
 
     <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
+      <div class="step reveal">
+        <span class="step-num">01</span>
         <h3>Add your contacts</h3>
-        <p>Drag in any spreadsheet. AI maps your column names automatically — "Phone No." or "Mobile #" or "Cell" all become Phone, no manual matching.</p>
+        <p>Drag in any spreadsheet. AI maps your column names automatically — "Phone No.", "Mobile #", "Cell" all become Phone, no manual matching.</p>
         <div class="step-mock" aria-hidden="true">
-          <div class="step-mock-row">
-            <div style="font-size:11px;color:var(--ink-muted);font-weight:600;width:90px">First name</div>
-            <div class="step-mock-cell fill"></div>
-          </div>
-          <div class="step-mock-row">
-            <div style="font-size:11px;color:var(--ink-muted);font-weight:600;width:90px">Last name</div>
-            <div class="step-mock-cell fill"></div>
-          </div>
-          <div class="step-mock-row">
-            <div style="font-size:11px;color:var(--ink-muted);font-weight:600;width:90px">Phone</div>
-            <div class="step-mock-cell fill"></div>
-            <span class="step-mock-pill" style="background:var(--purple-light);color:var(--purple)">AI matched</span>
-          </div>
+          <div class="mock-row"><span class="mock-key">First name</span><span class="mock-bar fill"></span></div>
+          <div class="mock-row"><span class="mock-key">Last name</span><span class="mock-bar fill"></span></div>
+          <div class="mock-row"><span class="mock-key">Phone</span><span class="mock-bar fill"></span><span class="mock-pill">AI matched</span></div>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">2</div>
+      <div class="step reveal">
+        <span class="step-num">02</span>
         <h3>Build your pipeline</h3>
-        <p>Customise stages, drag deals across, mark won and lost. Your team sees the same board in real time — no Excel sheets pinging around WhatsApp.</p>
+        <p>Customise stages, drag deals across, mark won and lost. Your whole team sees the same board in real time — no more Excel sheets pinging around WhatsApp.</p>
         <div class="step-mock" aria-hidden="true">
-          <div class="step-mock-mini-pipeline">
-            <div class="step-mock-mini-col">
-              New
-              <div class="step-mock-mini-card">Kamau Builders</div>
-            </div>
-            <div class="step-mock-mini-col">
-              Proposal
-              <div class="step-mock-mini-card">Lagos Exports</div>
-            </div>
-            <div class="step-mock-mini-col">
-              Won
-              <div class="step-mock-mini-card">Mombasa Fresh</div>
-            </div>
+          <div class="mock-mini-pipe">
+            <div class="mock-col">New<div class="mock-card">Kamau Builders</div></div>
+            <div class="mock-col">Proposal<div class="mock-card">Lagos Exports</div></div>
+            <div class="mock-col">Won<div class="mock-card">Mombasa Fresh</div></div>
           </div>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">3</div>
+      <div class="step reveal">
+        <span class="step-num">03</span>
         <h3>Let automations work</h3>
-        <p>Set rules once: "If a deal goes cold for 3 days, email the rep and create a follow-up task." Every lead gets chased even when no one's looking.</p>
+        <p>Set rules once: "If a deal goes cold for 3 days, email the rep and create a follow-up task." Every lead gets chased — even when no one's looking.</p>
         <div class="step-mock" aria-hidden="true">
-          <div class="step-mock-trigger">
-            <span aria-hidden="true">⚡</span>
-            <span>Deal cold for 3 days</span>
+          <div class="mock-trigger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Deal cold for 3 days
           </div>
-          <div class="step-mock-arrow">↓</div>
-          <div class="step-mock-action">
-            <span aria-hidden="true">✓</span>
-            <span>Email sent · Task created</span>
+          <div class="mock-arrow">↓</div>
+          <div class="mock-action">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Email sent · Task created
           </div>
         </div>
       </div>
@@ -357,172 +389,169 @@
   </div>
 </section>
 
-<!-- ── AI section ── -->
-<section class="ai-section">
-  <div class="container">
-    <div class="ai-grid">
+<!-- ── AI section ───────────────────────────────────────────────────────── -->
+<section class="section ai">
+  <div class="wrap ai-grid">
+    <div>
+      <span class="eyebrow"><span class="star">✱</span> AI · Built in</span>
+      <h2>An AI sales<br/>assistant that<br/>actually <em style="font-style:italic;">earns its keep.</em></h2>
+      <p class="ai-lede">Azayon uses modern AI to handle the boring parts — drafting emails, summarising contacts, and making sense of messy spreadsheets — so your team can focus on selling.</p>
+
+      <ul class="ai-list">
+        <li>
+          <span class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div><strong>Contact briefings</strong>A 3-sentence brief on any contact before you call — what's happened, where things stand, what to do next.</div>
+        </li>
+        <li>
+          <span class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div><strong>Email drafting</strong>Pick the intent — follow-up, proposal, re-engage — and get a ready-to-send email in seconds.</div>
+        </li>
+        <li>
+          <span class="check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div><strong>Smart CSV import</strong>Upload any spreadsheet. AI maps columns automatically — "Phone No.", "Biz", "Full Name" — no manual matching.</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="ai-card reveal" aria-hidden="true">
+      <div class="ai-card-head"><span class="pip"></span> Conversation · Live</div>
+      <div class="ai-prompt">
+        <span class="you">YOU</span>
+        <span>Summarise Kamau Builders before my 3pm call.</span>
+      </div>
+      <div class="ai-reply">
+        <span class="who">AZAYON AI</span>
+        <strong>Kamau Ochieng — Kamau Builders Ltd</strong><br/>
+        Stuck in <em style="font-style:italic;">Proposal</em> for 8 days. Strong interest, budget timing is the concern. Send a one-page summary, then call. Last touch was 4 days ago by Esther.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Compare ───────────────────────────────────────────────────────────── -->
+<section class="section compare">
+  <div class="wrap">
+    <div class="section-head">
       <div>
-        <div class="section-label">AI-powered</div>
-        <h2 class="section-title">Your AI sales<br/><em>assistant</em></h2>
-        <p class="section-sub" style="margin-bottom:0">Azayon uses Claude AI to help you work faster — drafting emails, summarising contacts, and making sense of messy data.</p>
-        <ul class="ai-features">
-          <li>
-            <div class="check"></div>
-            <div><strong>AI contact summary</strong> Get a 3-sentence brief on any contact before you call — what's happened, where things stand, what to do next.</div>
-          </li>
-          <li>
-            <div class="check"></div>
-            <div><strong>Email drafting</strong> Pick the intent (follow up, proposal, re-engage) and get a ready-to-send email in seconds.</div>
-          </li>
-          <li>
-            <div class="check"></div>
-            <div><strong>Smart CSV import</strong> Upload any spreadsheet. AI maps columns automatically — "Phone No.", "Biz", "Full Name" — no manual matching.</div>
-          </li>
+        <span class="eyebrow"><span class="star">✱</span> Why Azayon</span>
+        <h2>Why not just use<br/><span class="accent">HubSpot or Pipedrive?</span></h2>
+      </div>
+      <p>Global tools are great — for global teams. Here's the same set of needs, priced and built for an African SMB.</p>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card them">
+        <h3>Global CRMs</h3>
+        <p class="who">HubSpot · Pipedrive · Salesforce</p>
+        <ul>
+          <li><span class="k">Pricing</span><span class="v">$25–100 per seat / month</span></li>
+          <li><span class="k">Currency</span><span class="v">USD only</span></li>
+          <li><span class="k">Payment</span><span class="v">Card only</span></li>
+          <li><span class="k">Setup</span><span class="v">Hours; often a consultant</span></li>
+          <li><span class="k">Support</span><span class="v">Business hours US/EU</span></li>
         </ul>
       </div>
-      <div class="ai-visual" aria-hidden="true">
-        <div class="ai-chip"><span aria-hidden="true">✨</span> AI Summary</div>
-        <div class="ai-prompt">"Summarise this contact before my call with them"</div>
-        <div class="ai-response">
-          <strong>Kamau Ochieng — Kamau Builders Ltd</strong><br/><br/>
-          Stuck in Proposal for 8 days. Strong interest, budget timing his concern. Send a one-page summary, then call.
-        </div>
+      <div class="compare-card us">
+        <h3>Azayon</h3>
+        <p class="who">Built in Nairobi · Africa-first</p>
+        <ul>
+          <li><span class="k">Pricing</span><span class="v">KES 3,000 / month — whole team</span></li>
+          <li><span class="k">Currency</span><span class="v">KES today · NGN, GHS, ZAR, UGX coming</span></li>
+          <li><span class="k">Payment</span><span class="v">M-Pesa · Card · Bank transfer</span></li>
+          <li><span class="k">Setup</span><span class="v">5 minutes · AI-assisted import</span></li>
+          <li><span class="k">Support</span><span class="v">EAT business hours · 24-hr response</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Comparison block ── -->
-<section class="compare-section">
-  <div class="container">
-    <div class="section-label" style="text-align:center">Why Azayon</div>
-    <h2 class="section-title" style="text-align:center;max-width:100%;margin:0 auto">Why not just use<br/><em>HubSpot or Pipedrive?</em></h2>
-    <p class="section-sub" style="text-align:center;margin:16px auto 0">Global tools are great — for global teams. Here's how Azayon differs for an African SMB.</p>
-    <table class="compare-table" aria-label="Azayon compared with global CRMs">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Global CRMs</th>
-          <th class="compare-us">Azayon</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Pricing</td>
-          <td>$25–100 per seat / month</td>
-          <td class="compare-us">KES 3,000 / month, whole team</td>
-        </tr>
-        <tr>
-          <td>Currency</td>
-          <td>USD only</td>
-          <td class="compare-us">KES today, NGN/GHS/ZAR/UGX coming</td>
-        </tr>
-        <tr>
-          <td>Payment</td>
-          <td>Card only</td>
-          <td class="compare-us">M-Pesa, card, bank transfer</td>
-        </tr>
-        <tr>
-          <td>Setup</td>
-          <td>Hours; often a consultant</td>
-          <td class="compare-us">5 minutes, AI-assisted import</td>
-        </tr>
-        <tr>
-          <td>Support</td>
-          <td>Business hours US/EU</td>
-          <td class="compare-us">East Africa time, 24-hour response</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+<!-- ── Pricing teaser ───────────────────────────────────────────────────── -->
+<section class="pricing-teaser">
+  <div class="wrap-sm">
+    <span class="eyebrow"><span class="star">✱</span> Honest pricing</span>
+    <div class="price"><span class="ccy">KES</span>3,000<span class="per">/ month</span></div>
+    <p class="lede">One price, your whole team, every feature. No per-seat tax. No dollar conversion. No hidden charges.</p>
 
-<!-- ── Trial story callout ── -->
-<section style="padding:64px 0">
-  <div class="container">
-    <div class="trial-callout">
-      <p>Start with <strong>7 days of full access — no card</strong>. Stay free forever after that on a slimmer plan, or upgrade for <strong>KES 3,000/month</strong> when you're ready.</p>
+    <div class="pillrow">
+      <span class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 7 days free</span>
+      <span class="sep"></span>
+      <span class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No card required</span>
+      <span class="sep"></span>
+      <span class="p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Cancel anytime</span>
+    </div>
+    <div>
+      <a href="/pricing" class="btn btn-ghost btn-lg">See plan details
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ── Trust strip ── -->
-<div class="trust-strip">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <p>Built in Nairobi</p>
-        <p>By Peskaya Limited, founded 2025. Same time zone as your team.</p>
+<!-- ── Final CTA ────────────────────────────────────────────────────────── -->
+<section class="cta">
+  <div class="cta-grid">
+    <h2>Close more deals.<br/><span class="accent">With less effort.</span></h2>
+    <div class="cta-side">
+      <p>7 days of full access. No credit card. Set up in five minutes — bring your team in once it clicks.</p>
+      <div class="cta-actions">
+        <a href="https://app.azayon.com/register" class="btn btn-light btn-lg">
+          Try Azayon free
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+        <a href="/pricing" class="btn btn-outline-light btn-lg">See pricing</a>
       </div>
-      <div class="trust-item">
-        <p>Your data is yours</p>
-        <p>Encrypted at rest and in transit. Daily backups. CSV export anytime.</p>
-      </div>
-      <div class="trust-item">
-        <p>Compliant by design</p>
-        <p>Aligned with the Kenya Data Protection Act 2019. M-Pesa via Paystack.</p>
+      <div class="cta-meta">
+        <span>Built in Nairobi</span>
+        <span class="dot"></span>
+        <span>Peskaya Limited · 2026</span>
       </div>
     </div>
   </div>
-</div>
-
-<!-- ── Pricing preview ── -->
-<section style="padding:96px 0;border-top:1px solid var(--border);text-align:center">
-  <div class="container">
-    <div class="section-label">Simple pricing</div>
-    <h2 class="section-title" style="max-width:100%;margin:0 auto 16px">KES 3,000 per month.<br/><em>Everything included.</em></h2>
-    <p style="font-size:17px;color:var(--ink-soft);margin-bottom:32px">No per-seat fees. No dollar pricing. No hidden charges.</p>
-    <a href="/pricing" class="btn btn-primary btn-lg">See plan details →</a>
-  </div>
 </section>
 
-<!-- ── Final CTA ── -->
-<div class="cta-banner">
-  <h2>Ready to close more deals<br/><em>with less effort?</em></h2>
-  <p>7 days free. Full access. No credit card required.</p>
-  <div class="actions">
-    <a href="https://app.azayon.com/register" class="btn btn-white btn-lg">Try Azayon free</a>
-    <a href="/pricing" class="btn btn-dark-outline btn-lg">See pricing</a>
-  </div>
-</div>
-
-<!-- ── Footer ── -->
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo">Aza<span>yon</span></a>
-        <p>CRM built for African businesses. Simple tools, honest pricing, real results.</p>
-        <p style="margin-top:8px;font-size:12px;">A product of <strong>Peskaya Limited</strong></p>
+<!-- ── Footer ───────────────────────────────────────────────────────────── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <a href="/" class="brand"><span class="brand-mark" aria-hidden="true"></span>Azayon</a>
+        <p>A CRM built for African businesses. Simple tools, honest pricing, real results.</p>
+        <p class="pesk">A product of <strong>Peskaya Limited</strong></p>
       </div>
-      <div class="footer-col">
+      <div class="foot-col">
         <h4>Product</h4>
         <a href="/#features">Features</a>
         <a href="/pricing">Pricing</a>
         <a href="https://app.azayon.com/register">Start free trial</a>
         <a href="https://app.azayon.com/login">Sign in</a>
       </div>
-      <div class="footer-col">
+      <div class="foot-col">
         <h4>Company</h4>
         <a href="/about">About</a>
         <a href="mailto:hello@azayon.com">Contact</a>
       </div>
-      <div class="footer-col">
+      <div class="foot-col">
         <h4>Legal</h4>
         <a href="/privacy">Privacy policy</a>
         <a href="/terms">Terms of service</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Peskaya Limited. All rights reserved.</p>
-      <p>Made with care in <strong>Nairobi, Kenya <span aria-label="Kenya flag">🇰🇪</span></strong></p>
+    <div class="foot-bottom">
+      <span>© 2026 Peskaya Limited · All rights reserved</span>
+      <span class="made">Made with care in Nairobi <span class="flag" aria-label="Kenya"></span></span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Mobile nav toggle. Tracks the aria-expanded state on the button so screen
-  // readers know whether the menu is open.
+  // Mobile nav toggle. Tracks aria-expanded for screen readers.
   const hamburger = document.getElementById('hamburgerBtn');
   const mobileNav = document.getElementById('mobileNav');
   hamburger?.addEventListener('click', () => {
@@ -531,24 +560,19 @@
     hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   });
 
-  // Reveal-on-scroll for content cards. Skipped if the user prefers reduced motion.
+  // Reveal-on-scroll. Skipped for users who prefer reduced motion.
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.feat, .step, .price-card, .value-card, .trust-item').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
-    });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
 </script>
 

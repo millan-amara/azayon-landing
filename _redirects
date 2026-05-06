@@ -1,11 +1,14 @@
-# Netlify / Cloudflare Pages redirect rules.
+# Netlify / Cloudflare Pages clean-URL rewrites.
 #
-# We link to clean URLs in the footer and sitemap (/privacy, /terms) so the
-# canonical URLs match the address bar. Without these rewrites, those paths
-# would 404 because the static host can only serve the literal .html files.
+# We link to /pricing, /about, /privacy, /terms in the nav, sitemap and
+# canonicals so the canonical URLs match the address bar. Without these
+# rewrites, those paths would 404 because the static host can only serve
+# the literal .html files.
 #
-# `200` is a rewrite (URL stays clean in the browser); `301` would be a
-# redirect (URL changes to .html). We want rewrites.
+# `200` is a rewrite (URL stays clean in the browser); `301` would change
+# the URL to the .html version. We want rewrites.
 
+/pricing   /pricing.html   200
+/about     /about.html     200
 /privacy   /privacy.html   200
 /terms     /terms.html     200

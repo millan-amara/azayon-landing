@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── Primary SEO ────────────────────────────────────────────────────── -->
+  <title>Pricing — Azayon CRM | KES 3,000/month, whole team</title>
+  <meta name="description" content="Honest pricing for African businesses. Free for solo use. KES 3,000/month for your whole team — no per-seat fees, no dollar conversion. Pay via M-Pesa, card or bank." />
+  <meta name="author" content="Peskaya Limited" />
+  <link rel="canonical" href="https://azayon.com/pricing" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#5046e4" />
+
+  <!-- ─── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Azayon" />
+  <meta property="og:title" content="Pricing — Azayon CRM" />
+  <meta property="og:description" content="KES 3,000/month for your whole team. No per-seat fees. 7-day free trial, no credit card." />
+  <meta property="og:url" content="https://azayon.com/pricing" />
+  <meta property="og:locale" content="en_KE" />
+  <meta property="og:image" content="https://azayon.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing — Azayon CRM" />
+  <meta name="twitter:description" content="KES 3,000/month for your whole team. 7-day free trial, no credit card." />
+  <meta name="twitter:image" content="https://azayon.com/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- ─── Structured data: Offers + FAQPage ──────────────────────────────── -->
+  <!-- The FAQ schema lives here (not on home) because the FAQ content is
+       on this page. Google wants the schema where the visible content is. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Azayon CRM",
+    "description": "A CRM built for African SMBs — pipeline, contacts, automations and invoices in one tool.",
+    "brand": { "@type": "Brand", "name": "Azayon" },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "KES",
+      "lowPrice": "0",
+      "highPrice": "25000",
+      "offerCount": 3,
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock",
+          "url": "https://app.azayon.com/register"
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth (monthly)",
+          "price": "3000",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock",
+          "url": "https://app.azayon.com/register"
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth (annual)",
+          "price": "25000",
+          "priceCurrency": "KES",
+          "availability": "https://schema.org/InStock",
+          "url": "https://app.azayon.com/register"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens after my 7-day trial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your data stays safe. You'll be prompted to subscribe to continue using Growth features. If you don't subscribe, you move to the Free plan automatically — nothing is deleted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does M-Pesa payment work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At checkout you'll be redirected to Paystack where you can pay via M-Pesa, debit card, or bank transfer. Payments are processed securely and your subscription activates instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cancel anytime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Cancel any time from your settings page. You'll keep access until the end of your billing period. No questions asked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I have more than 5 users. Can Azayon still work for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Get in touch at hello@azayon.com and we'll work out a custom arrangement. Larger team plans are coming soon."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="logo">Aza<span>yon</span></a>
+      <ul class="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/pricing" aria-current="page">Pricing</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://app.azayon.com/login" class="nav-login">Sign in</a>
+        <a href="https://app.azayon.com/register" class="btn btn-primary">Start free trial</a>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/#features">Features</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="https://app.azayon.com/login">Sign in</a>
+    <a href="https://app.azayon.com/register" class="btn btn-primary">Start free trial</a>
+  </div>
+</nav>
+
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-header">
+      <div class="section-label">Pricing</div>
+      <h1 class="section-title" style="margin-left:auto;margin-right:auto;font-size:clamp(36px,4vw,56px)">Honest pricing.<br/><em>Built for your market.</em></h1>
+      <p style="font-size:17px;color:var(--ink-soft)">No per-seat traps. No dollar conversion. No hidden fees.<br/>One flat rate in KES — for your whole team.</p>
+
+      <div class="pricing-toggle">
+        <button class="toggle-btn active" id="monthlyBtn" type="button">Monthly</button>
+        <button class="toggle-btn" id="annualBtn" type="button">Annual <span class="save-badge">Save 17%</span></button>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- FREE -->
+      <div class="price-card">
+        <div class="price-name">Free</div>
+        <div class="price-amount"><sup>KES</sup>0</div>
+        <div class="price-period">forever</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="tick" aria-hidden="true">✓</span> 1 user</li>
+          <li><span class="tick" aria-hidden="true">✓</span> 200 contacts</li>
+          <li><span class="tick" aria-hidden="true">✓</span> 20 deals</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Basic pipeline</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Task management</li>
+          <li><span class="cross" aria-hidden="true">✕</span> <span style="color:var(--ink-muted)">Automations</span></li>
+          <li><span class="cross" aria-hidden="true">✕</span> <span style="color:var(--ink-muted)">AI tools</span></li>
+          <li><span class="cross" aria-hidden="true">✕</span> <span style="color:var(--ink-muted)">File attachments</span></li>
+          <li><span class="cross" aria-hidden="true">✕</span> <span style="color:var(--ink-muted)">n8n / webhooks</span></li>
+        </ul>
+        <a href="https://app.azayon.com/register" class="btn btn-ghost" style="width:100%;justify-content:center">Get started free</a>
+      </div>
+
+      <!-- GROWTH -->
+      <div class="price-card featured">
+        <div class="price-badge">Most popular</div>
+        <div class="price-name">Growth</div>
+        <div class="price-amount" id="growthPrice"><sup>KES</sup>3,000</div>
+        <div class="price-period" id="growthPeriod">per month · billed monthly</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>5 users</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>Unlimited contacts</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>Unlimited deals</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> Full pipeline &amp; tasks</li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>All automations</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>AI email drafting</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>AI contact summaries</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>File attachments</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> <strong>n8n / webhooks</strong></li>
+          <li><span class="tick" aria-hidden="true">✓</span> Email support</li>
+        </ul>
+        <a href="https://app.azayon.com/register" class="btn btn-primary" style="width:100%;justify-content:center">Start your 7-day trial — no card</a>
+      </div>
+    </div>
+
+    <div class="founding-note">
+      <strong>7-day free trial on Growth.</strong> No credit card required. Full access from day one. Pay via M-Pesa, card or bank transfer.
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-wrap">
+      <h2>Common questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p>What happens after my 7-day trial?</p>
+          <p>Your data stays safe. You'll be prompted to subscribe to continue using Growth features. If you don't subscribe, you move to the Free plan automatically — nothing is deleted.</p>
+        </div>
+        <div class="faq-item">
+          <p>How does M-Pesa payment work?</p>
+          <p>At checkout you'll be redirected to Paystack where you can pay via M-Pesa, debit card, or bank transfer. Payments are processed securely and your subscription activates instantly.</p>
+        </div>
+        <div class="faq-item">
+          <p>Can I cancel anytime?</p>
+          <p>Yes. Cancel any time from your settings page. You'll keep access until the end of your billing period. No questions asked.</p>
+        </div>
+        <div class="faq-item">
+          <p>I have more than 5 users. Can Azayon still work for me?</p>
+          <p>Get in touch at <a href="mailto:hello@azayon.com">hello@azayon.com</a> and we'll work out a custom arrangement. Larger team plans are coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<div class="cta-banner" style="margin-top:80px">
+  <h2>Close one extra deal.<br/><em>It pays for itself.</em></h2>
+  <p>KES 3,000/month. Your whole team. No limits.</p>
+  <div class="actions">
+    <a href="https://app.azayon.com/register" class="btn btn-white btn-lg">Try Azayon free</a>
+  </div>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">Aza<span>yon</span></a>
+        <p>CRM built for African businesses. Simple tools, honest pricing, real results.</p>
+        <p style="margin-top:8px;font-size:12px;">A product of <strong>Peskaya Limited</strong></p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/#features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="https://app.azayon.com/register">Start free trial</a>
+        <a href="https://app.azayon.com/login">Sign in</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="mailto:hello@azayon.com">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms of service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Peskaya Limited. All rights reserved.</p>
+      <p>Made with care in <strong>Nairobi, Kenya <span aria-label="Kenya flag">🇰🇪</span></strong></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+
+  // Pricing toggle — single source of truth here, so the price label and
+  // billing period stay in sync regardless of which button you click.
+  const monthlyBtn = document.getElementById('monthlyBtn');
+  const annualBtn  = document.getElementById('annualBtn');
+  const priceEl    = document.getElementById('growthPrice');
+  const periodEl   = document.getElementById('growthPeriod');
+
+  function setBilling(annual) {
+    monthlyBtn.classList.toggle('active', !annual);
+    annualBtn.classList.toggle('active',  annual);
+    priceEl.innerHTML = annual ? '<sup>KES</sup>25,000' : '<sup>KES</sup>3,000';
+    periodEl.textContent = annual
+      ? 'per year · billed annually (save KES 11,000)'
+      : 'per month · billed monthly';
+  }
+  monthlyBtn?.addEventListener('click', () => setBilling(false));
+  annualBtn?.addEventListener('click',  () => setBilling(true));
+</script>
+
+</body>
+</html>

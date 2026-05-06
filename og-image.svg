@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Open Graph / Twitter Card image source.
+
+  Required dimensions: 1200×630 (the standard for og:image and Twitter
+  summary_large_image).
+
+  Browsers display SVG OG images inconsistently — Twitter, WhatsApp, and most
+  scrapers want PNG/JPG. So this is the SOURCE; convert to PNG before
+  deploying:
+
+    npx @resvg/resvg-js og-image.svg og-image.png
+    # or via ImageMagick
+    convert -density 144 og-image.svg og-image.png
+    # or via a designer tool — Figma, Sketch, etc.
+
+  Drop the resulting `og-image.png` next to this file (same dir as index.html).
+  The og:image and twitter:image meta tags in index.html already reference it.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5046e4"/>
+      <stop offset="100%" stop-color="#7c6fee"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Soft circles for texture -->
+  <circle cx="1080" cy="120" r="220" fill="#ffffff" opacity="0.05"/>
+  <circle cx="120"  cy="540" r="180" fill="#ffffff" opacity="0.04"/>
+
+  <!-- Logo wordmark -->
+  <text x="80" y="120" font-family="Georgia, 'DM Serif Display', serif" font-size="44" font-weight="400" fill="#ffffff" letter-spacing="-1">
+    Aza<tspan fill="#ffd6ff" font-style="italic">yon</tspan>
+  </text>
+
+  <!-- Headline -->
+  <text x="80" y="280" font-family="Georgia, 'DM Serif Display', serif" font-size="76" font-weight="400" fill="#ffffff" letter-spacing="-2">
+    The CRM built for
+  </text>
+  <text x="80" y="370" font-family="Georgia, 'DM Serif Display', serif" font-size="76" font-style="italic" fill="#ffd6ff" letter-spacing="-2">
+    African businesses.
+  </text>
+
+  <!-- Subhead -->
+  <text x="80" y="445" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif" font-size="28" fill="#ffffff" opacity="0.9">
+    Pipeline · Invoices · Automations
+  </text>
+
+  <!-- Pricing pill -->
+  <rect x="80" y="490" width="320" height="60" rx="30" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.3"/>
+  <text x="240" y="528" text-anchor="middle" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="600" fill="#ffffff">
+    KES 3,000 / month
+  </text>
+
+  <!-- Domain -->
+  <text x="1120" y="570" text-anchor="end" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="20" fill="#ffffff" opacity="0.7">
+    azayon.com
+  </text>
+</svg>

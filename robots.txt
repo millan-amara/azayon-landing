@@ -1,0 +1,10 @@
+# Azayon marketing site (azayon.com)
+# Crawl freely — there's nothing private here.
+
+User-agent: *
+Allow: /
+
+# Be a good citizen — most pages are static, but throttle aggressive bots a bit.
+Crawl-delay: 1
+
+Sitemap: https://azayon.com/sitemap.xml

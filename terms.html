@@ -1,0 +1,325 @@
+<!--
+  Terms of Service template for Azayon (Peskaya Limited).
+
+  IMPORTANT: This is a starting template, NOT legal advice. Have a Kenyan
+  lawyer review before publishing. Search for [REPLACE: ...] markers and fill
+  them in before going live. Pay extra attention to:
+    - Pricing details (must match the marketing site)
+    - Refund policy (legally binding once published)
+    - Cancellation/termination windows
+    - Limitation of liability cap (often expressed as "fees paid in the last
+      12 months", but you may want different)
+    - Governing law / dispute resolution clauses
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Azayon</title>
+  <meta name="description" content="The legal terms that apply when you use Azayon, the CRM for African businesses. Operated by Peskaya Limited under the laws of Kenya." />
+  <link rel="canonical" href="https://azayon.com/terms" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#5046e4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #5046e4;
+      --ink: #0f0e17;
+      --ink-soft: #3d3c47;
+      --ink-muted: #8b8a96;
+      --border: #e8e7ef;
+      --bg: #fafafa;
+      --white: #ffffff;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .topbar {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .topbar .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .logo span { color: var(--purple); font-style: italic; }
+    .topbar a:not(.logo) {
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-decoration: none;
+    }
+    .topbar a:not(.logo):hover { color: var(--purple); }
+
+    main { padding: 64px 0 96px; }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      color: var(--ink-muted);
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+    }
+    .toc ol {
+      list-style: none;
+      column-count: 2;
+      column-gap: 24px;
+    }
+    @media (max-width: 600px) { .toc ol { column-count: 1; } }
+    .toc li {
+      font-size: 14px;
+      padding: 4px 0;
+      break-inside: avoid;
+    }
+    .toc a { color: var(--ink-soft); text-decoration: none; }
+    .toc a:hover { color: var(--purple); text-decoration: underline; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      letter-spacing: -0.5px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      scroll-margin-top: 24px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    p, ul, ol {
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+    }
+    ul, ol { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--purple); }
+    strong { color: var(--ink); }
+
+    .placeholder {
+      background: #fff7e6;
+      border-left: 3px solid #f59e0b;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #92400e;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 4px 0;
+    }
+
+    /* The "uppercase liability" block — common convention in SaaS Terms;
+       legal teams often want it visually distinguished. */
+    .legal-emphasis {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      background: var(--white);
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer a { color: var(--ink-muted); text-decoration: none; margin-right: 16px; }
+    footer a:hover { color: var(--purple); }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a href="/" class="logo">Aza<span>yon</span></a>
+    <a href="/">← Back to home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: <span class="placeholder">[REPLACE: e.g. 6 May 2026]</span></p>
+
+    <p>These Terms govern your use of <strong>Azayon</strong>, a CRM service operated by <strong>Peskaya Limited</strong> ("we", "us"). By creating an account or using Azayon, you agree to these Terms. If you don't agree, don't use the service.</p>
+
+    <p>We've kept this short. If anything is unclear, email <a href="mailto:hello@azayon.com">hello@azayon.com</a>.</p>
+
+    <nav class="toc" aria-label="Sections">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#account">1. Your account</a></li>
+        <li><a href="#service">2. The service</a></li>
+        <li><a href="#billing">3. Billing &amp; refunds</a></li>
+        <li><a href="#trial">4. Free trial</a></li>
+        <li><a href="#use">5. Acceptable use</a></li>
+        <li><a href="#data">6. Your data</a></li>
+        <li><a href="#ip">7. Intellectual property</a></li>
+        <li><a href="#third-party">8. Third-party services</a></li>
+        <li><a href="#term">9. Term &amp; termination</a></li>
+        <li><a href="#warranty">10. Warranties &amp; disclaimers</a></li>
+        <li><a href="#liability">11. Limitation of liability</a></li>
+        <li><a href="#indemnity">12. Indemnification</a></li>
+        <li><a href="#changes">13. Changes</a></li>
+        <li><a href="#law">14. Governing law</a></li>
+        <li><a href="#contact">15. Contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="account">1. Your account</h2>
+    <p>You must be at least 18 years old and able to enter into a binding contract. You're responsible for everything that happens under your account, including the actions of team members you invite. Keep your password secret. If you suspect unauthorised access, email us immediately.</p>
+
+    <h2 id="service">2. The service</h2>
+    <p>Azayon provides a customer-relationship-management ("CRM") tool with features including a deal pipeline, contact management, task management, automations, invoicing, and integrations. Specific features available depend on your subscription plan.</p>
+    <p>We may add, modify, or remove features over time. We won't materially reduce the core features of the plan you're paying for without notice.</p>
+
+    <h2 id="billing">3. Billing &amp; refunds</h2>
+
+    <h3>Pricing</h3>
+    <p>Current prices are listed at <a href="/#pricing">azayon.com/#pricing</a>. The Growth plan is <strong>KES 3,000 per month</strong> or <strong>KES 25,000 per year</strong> when billed annually. Prices are inclusive of any applicable VAT.</p>
+    <p>We may change pricing for new subscriptions at any time. For existing paying subscriptions, we'll give at least 30 days' notice before any price increase takes effect.</p>
+
+    <h3>Payment</h3>
+    <p>Payments are processed by <a href="https://paystack.com">Paystack</a>. You can pay via M-Pesa, debit card, or bank transfer. Subscriptions auto-renew at the end of each billing cycle until cancelled.</p>
+
+    <h3>Refunds</h3>
+    <p><span class="placeholder">[REPLACE: Pick one and replace this paragraph entirely.<br><br>
+      Option A — strict (matches "cancel anytime, keep access until end of period"):<br>
+      "We do not provide refunds for partial billing periods. Cancel any time to stop the next renewal; you'll keep access until the end of the period you've already paid for."<br><br>
+      Option B — pro-rated:<br>
+      "If you cancel an annual subscription, we refund the unused portion on a pro-rata basis. Monthly subscriptions are non-refundable; you keep access until the end of the period."<br><br>
+      Option C — 7-day satisfaction:<br>
+      "If you're unhappy in your first 7 days of a paid plan, email us and we'll refund the most recent charge in full."]</span></p>
+
+    <h3>Failed payments</h3>
+    <p>If a charge fails, we'll retry for up to 7 days and email you. If we can't collect payment, your account moves to the Free plan automatically — no data is deleted.</p>
+
+    <h2 id="trial">4. Free trial</h2>
+    <p>New accounts get 7 days of free access to the Growth plan. No card is required to start. After 7 days, if you don't subscribe, your account moves to the Free plan automatically. Your data stays — nothing is deleted.</p>
+    <p>We may change or end the trial offer at any time, but doing so won't shorten any trial that's already in progress.</p>
+
+    <h2 id="use">5. Acceptable use</h2>
+    <p>You may not, and you may not permit anyone using your account to:</p>
+    <ul>
+      <li>Use Azayon to send spam, harass, defraud, or violate anyone's rights or applicable law;</li>
+      <li>Reverse-engineer, decompile, or attempt to extract our source code, except as expressly allowed by law;</li>
+      <li>Interfere with the service — e.g. attempting to overwhelm it, scrape it at high volume, or probe for vulnerabilities without permission;</li>
+      <li>Resell, white-label, or sublicense Azayon without our written agreement;</li>
+      <li>Use Azayon to store data you don't have a lawful basis to store — for example, sensitive personal data without the subject's consent;</li>
+      <li>Build a competing product using insights gained from your access to Azayon.</li>
+    </ul>
+    <p>If you find a security issue, please report it responsibly to <a href="mailto:hello@azayon.com">hello@azayon.com</a>. We'll work with you to fix it before it's disclosed publicly.</p>
+
+    <h2 id="data">6. Your data</h2>
+    <p>The contacts, deals, tasks, documents and other content you put into Azayon ("Customer Data") belong to <strong>you</strong>. You grant us a limited licence to host, store, copy, and process Customer Data only as needed to provide the service.</p>
+    <p>You can export Customer Data at any time. CSV export is available for contacts, deals and tasks; for anything not covered by built-in export, email us and we'll help.</p>
+    <p>How we handle personal data is described in our <a href="/privacy">Privacy Policy</a>. By using Azayon you agree we may act as your data processor for personal data you upload, and you agree to act as the data controller for that data — including ensuring you have the right to upload it.</p>
+
+    <h2 id="ip">7. Intellectual property</h2>
+    <p>Azayon — including its software, designs, brand, and documentation — is owned by Peskaya Limited and protected by copyright and other intellectual-property laws. We grant you a limited, revocable, non-exclusive, non-transferable licence to use Azayon under these Terms. Nothing in these Terms transfers ownership to you.</p>
+    <p>If you give us feedback or suggestions about Azayon, we may use them without obligation.</p>
+
+    <h2 id="third-party">8. Third-party services</h2>
+    <p>Azayon connects to third-party services such as Paystack (payments), Cloudinary (file storage), Meta WhatsApp Business Platform (notifications), Anthropic (AI features), and any integrations you set up yourself (e.g. n8n webhooks). We're not responsible for those services' availability, behaviour, or terms. When you use them through Azayon, their terms also apply.</p>
+
+    <h2 id="term">9. Term &amp; termination</h2>
+
+    <h3>Termination by you</h3>
+    <p>Cancel your subscription any time from Settings → Billing. You'll keep access until the end of the period you've paid for, then move to the Free plan. To delete your account entirely, email <a href="mailto:hello@azayon.com">hello@azayon.com</a>.</p>
+
+    <h3>Termination by us</h3>
+    <p>We may suspend or terminate your account if you breach these Terms in a material way and don't fix it within 14 days of notice, or immediately for serious breaches (fraud, illegal use, security threats). We may also terminate the service entirely with at least 60 days' notice, in which case you'll receive a pro-rated refund of any prepaid fees and a chance to export your data.</p>
+
+    <h3>What happens after termination</h3>
+    <p>We delete your data within <span class="placeholder">[REPLACE: e.g. "30 days"]</span> of account deletion, except where we're legally required to retain it (see the <a href="/privacy#retention">Privacy Policy</a>). Sections that by their nature should survive termination — including 6 (your data), 7 (IP), 11 (liability), 12 (indemnity) and 14 (governing law) — survive.</p>
+
+    <h2 id="warranty">10. Warranties &amp; disclaimers</h2>
+    <div class="legal-emphasis">
+      <p style="margin: 0; color: var(--ink);">Azayon is provided "as is" and "as available". To the maximum extent permitted by law, we disclaim all warranties, whether express or implied — including any implied warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that the service will be uninterrupted, error-free, or completely secure.</p>
+    </div>
+
+    <h2 id="liability">11. Limitation of liability</h2>
+    <div class="legal-emphasis">
+      <p style="margin: 0 0 12px; color: var(--ink);">To the maximum extent permitted by law, neither party will be liable for any indirect, incidental, special, consequential, or punitive damages — including lost profits, lost data, or business interruption — arising out of or relating to these Terms, even if advised of the possibility of such damages.</p>
+      <p style="margin: 0; color: var(--ink);">Our total liability to you in any 12-month period will not exceed the greater of (a) the fees you paid us in that period, or (b) <span class="placeholder">[REPLACE: e.g. "KES 10,000"]</span>.</p>
+    </div>
+    <p>Nothing in these Terms limits liability that cannot be limited by law — for example, liability for fraud, gross negligence, or death/personal injury caused by negligence.</p>
+
+    <h2 id="indemnity">12. Indemnification</h2>
+    <p>You agree to defend, indemnify and hold harmless Peskaya Limited and its directors, employees, and agents from any third-party claim arising from (a) your use of Azayon in breach of these Terms, (b) Customer Data you upload that infringes someone's rights or violates the law, or (c) your negligence or wilful misconduct.</p>
+    <p>We'll give prompt notice of any claim and let you control the defence (with our reasonable cooperation), provided you don't agree to any settlement that imposes liability or obligations on us without our consent.</p>
+
+    <h2 id="changes">13. Changes</h2>
+    <p>We may update these Terms from time to time. If a change is material, we'll email registered users and post the change here at least 14 days before it takes effect. By continuing to use Azayon after a change takes effect, you accept the new Terms. If you don't accept them, cancel your account before the effective date.</p>
+
+    <h2 id="law">14. Governing law</h2>
+    <p>These Terms are governed by the laws of the <strong>Republic of Kenya</strong>. Any dispute that can't be resolved informally will be settled by the courts of <span class="placeholder">[REPLACE: e.g. "Nairobi, Kenya"]</span>, and you and we agree to that exclusive jurisdiction. Nothing here prevents either party from seeking urgent injunctive relief in any competent court.</p>
+    <p><span class="placeholder">[OPTIONAL: If you'd rather use arbitration, replace the paragraph above with an arbitration clause referring disputes to the Nairobi Centre for International Arbitration (NCIA) under its rules.]</span></p>
+
+    <h2 id="contact">15. Contact</h2>
+    <p>
+      <strong>Peskaya Limited</strong><br>
+      <span class="placeholder">[REPLACE: Registered office address]</span><br>
+      Email: <a href="mailto:hello@azayon.com">hello@azayon.com</a>
+    </p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div>
+      <a href="/">Azayon</a>
+      <a href="/terms">Terms of service</a>
+      <a href="/privacy">Privacy policy</a>
+    </div>
+    <div>© <span class="placeholder">[REPLACE: year]</span> Peskaya Limited</div>
+  </div>
+</footer>
+
+</body>
+</html>

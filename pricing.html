@@ -31,57 +31,27 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- ─── Structured data: Offers + FAQPage ──────────────────────────────── -->
-  <!-- The FAQ schema lives here (not on home) because the FAQ content is
-       on this page. Google wants the schema where the visible content is. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Azayon CRM",
-    "description": "A CRM built for African SMBs — pipeline, contacts, automations and invoices in one tool.",
-    "brand": { "@type": "Brand", "name": "Azayon" },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "KES",
-      "lowPrice": "0",
-      "highPrice": "25000",
-      "offerCount": 3,
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Free",
-          "price": "0",
-          "priceCurrency": "KES",
-          "availability": "https://schema.org/InStock",
-          "url": "https://app.azayon.com/register"
-        },
-        {
-          "@type": "Offer",
-          "name": "Growth (monthly)",
-          "price": "3000",
-          "priceCurrency": "KES",
-          "availability": "https://schema.org/InStock",
-          "url": "https://app.azayon.com/register"
-        },
-        {
-          "@type": "Offer",
-          "name": "Growth (annual)",
-          "price": "25000",
-          "priceCurrency": "KES",
-          "availability": "https://schema.org/InStock",
-          "url": "https://app.azayon.com/register"
-        }
-      ]
-    }
-  }
-  </script>
-
+  <!-- ─── Structured data: FAQPage only ──────────────────────────────────── -->
+  <!-- The Product/AggregateOffer schema used to live here too, but Google
+       Search Console flagged it as missing `aggregateRating`/`review` —
+       Product snippets need real ratings to be eligible, and we don't fake
+       reviews. The home page's SoftwareApplication schema already carries
+       the canonical offers (monthly + annual), so this page sticks to the
+       FAQ schema — the high-value one for /pricing anyway, since FAQ rich
+       results put question/answer accordions directly under the listing. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does the trial include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "During your 7-day trial you can try every premium feature — automations, AI tools, file attachments, and n8n / webhooks. The Free plan's caps on users, contacts and deals still apply during the trial — upgrade to Growth to lift them."
+        }
+      },
       {
         "@type": "Question",
         "name": "What happens after my 7-day trial?",
@@ -104,6 +74,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Cancel any time from your settings page. You'll keep access until the end of your billing period. No questions asked."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my card fails?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If a renewal payment fails, you get a 5-day grace window — your Growth features keep working and we'll show a banner so you know to update your card. After 5 days unpaid, premium features pause until you fix it. Your data stays safe throughout."
         }
       },
       {
@@ -211,13 +189,17 @@
     </div>
 
     <div class="founding-note">
-      <strong>7-day free trial on Growth.</strong> No credit card required. Full access from day one. Pay via M-Pesa, card or bank transfer.
+      <strong>7-day free trial on Growth.</strong> No credit card required. Try every premium feature — automations, AI, file attachments, webhooks. Pay via M-Pesa, card or bank transfer.
     </div>
 
     <!-- FAQ -->
     <div class="faq-wrap">
       <h2>Common questions</h2>
       <div class="faq-list">
+        <div class="faq-item">
+          <p>What does the trial include?</p>
+          <p>During your 7-day trial you can try every premium feature — automations, AI tools, file attachments, and n8n / webhooks. The Free plan's caps on users, contacts and deals still apply during the trial — upgrade to Growth to lift them.</p>
+        </div>
         <div class="faq-item">
           <p>What happens after my 7-day trial?</p>
           <p>Your data stays safe. You'll be prompted to subscribe to continue using Growth features. If you don't subscribe, you move to the Free plan automatically — nothing is deleted.</p>
@@ -229,6 +211,10 @@
         <div class="faq-item">
           <p>Can I cancel anytime?</p>
           <p>Yes. Cancel any time from your settings page. You'll keep access until the end of your billing period. No questions asked.</p>
+        </div>
+        <div class="faq-item">
+          <p>What if my card fails?</p>
+          <p>If a renewal payment fails, you get a 5-day grace window — your Growth features keep working and we'll show a banner so you know to update your card. After 5 days unpaid, premium features pause until you fix it. Your data stays safe throughout.</p>
         </div>
         <div class="faq-item">
           <p>I have more than 5 users. Can Azayon still work for me?</p>
